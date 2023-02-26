@@ -1,0 +1,30 @@
+.home_body {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0 0 0;
+}
+.home_link {
+    width: 300px;
+    /*height: 300px;*/
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #282c34;
+    border-radius: 20px;
+    background: antiquewhite;
+    margin: 0 5px 0 5px;
+}
+.home_link .link {
+    text-align: center;
+    padding: 10px;
+    /*height: 50px;*/
+    background: darksalmon;
+    border-radius: 10px;
+    transition: .2s;
+    margin: 5px 0 5px 0;
+}
+.home_link .link:hover {
+    color: #fff;
+    background: chocolate;
+}

@@ -1,0 +1,110 @@
+.create_info {
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.create_info form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.create_info label {
+    margin: 7px 0 3px 0;
+}
+.create_info input {
+    height: 30px;
+}
+.create_info button {
+    width: 200px; height: 30px;
+    margin: 20px 0 0 0;
+}
+.create_info .clear_btn {
+    background: indianred;
+    margin: 10px 0 0 0;
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+}
+.create_info .button_submit {
+    background: darkseagreen;
+    margin: 5px 0 0 0;
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+}
+
+.read_info table {
+    margin: 0; padding: 0;
+    border-collapse: collapse;
+    width: 70vw;
+}
+.read_info th {
+    margin: 0; padding: 0;
+    background: #282c34;
+    color: #fff;
+    height: 40px;
+}
+.read_info td {
+    margin: 0; padding: 0;
+    text-align: center;
+    background: aliceblue;
+    height: 40px;
+}
+.read_info tr {
+    margin: 0; padding: 0;
+}
+.read_info .edit_row {
+    background: rgba(0,153,0, 1);
+    width: 50%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+}
+.read_info .edit_row:hover {
+    background: rgba(0,153,0, .5);
+}
+.read_info .delete_row {
+    background: rgba(217,80,48, 1);
+    width: 50%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .2s;
+}
+.read_info .delete_row:hover {
+    background: rgba(217,80,48, .5);
+}
+.read_info .td_ed_del {
+    display: flex;
+    width: 100px;
+}
+.read_info .th_ed_del {
+    width: 100px;
+}
+
+.delete_info table {
+    margin: 0; padding: 0;
+    border-collapse: collapse;
+    width: 70vw;
+}
+.delete_info th {
+    margin: 0; padding: 0;
+    background: #282c34;
+    color: #fff;
+    height: 40px;
+}
+.delete_info td {
+    margin: 0; padding: 0;
+    text-align: center;
+    background: aliceblue;
+    height: 40px;
+}
+.delete_info tr {
+    margin: 0; padding: 0;
+    width: 70vw;
+}
+.delete_info {}
