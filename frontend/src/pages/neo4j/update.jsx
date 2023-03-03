@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Elastic = () => {
+const Update = () => {
     return (
         <div>
-            elastic
+            neo4j.update
         </div>
     );
 };
 
-export default Elastic;
+export default Update;

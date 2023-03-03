@@ -13,7 +13,7 @@ module.exports = {
         try {
             await redisClient.connect();
             if (await redisClient.ping() === 'PONG') {
-                console.log('RedisDB: Подключено - Порт: ' + port)
+                console.log('RedisDB: Подключено - [ Порт: ' + port + ' ]');
             } else {
                 console.log('RedisDB: Не подключено')
             }

@@ -12,7 +12,7 @@ module.exports = {
     connect: (async () => {
         try {
             await session.run('Match () Return 1 Limit 1');
-            console.log('Neo4j: Подключено - Порт: 7688');
+            console.log('Neo4j: Подключено - [ Порт: 7688 ]');
         } catch (e) {
             console.log('Neo4j: Не подключено')
         }

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Mongo = () => {
+const Delete = () => {
     return (
         <div>
-            mongo
+            neo4j.delete
         </div>
     );
 };
 
-export default Mongo;
+export default Delete;

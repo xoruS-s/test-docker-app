@@ -42,7 +42,7 @@ app.use('/postgre', read_postgres_router);
 // app.use('/postgre', delete_postgre_router);
 
             //NEO4J
-// app.use('/neo4j', create_neo4j_router);
+app.use('/neo4j', create_neo4j_router);
 app.use('/neo4j', read_neo4j_router);
 // app.use('/neo4j', update_neo4j_router);
 // app.use('/neo4j', delete_neo4j_router);

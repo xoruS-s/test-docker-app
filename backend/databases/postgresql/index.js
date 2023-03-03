@@ -27,7 +27,7 @@ module.exports = {
             if (err !== undefined) {
                 console.log('PostgreSQL: Не подключено');
             } else {
-                console.log('PostgreSQL: Подключено - Порт: ' + config_connect.port)
+                console.log('PostgreSQL: Подключено - [ Порт: ' + config_connect.port + ' ]')
             }
             // pool.end()
         })

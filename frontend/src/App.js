@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
+
 import { Routes, Route } from "react-router-dom";
 import { Create, MongoRead, Update, Delete } from './pages/mongo/index';
 import { RedisCreate, RedisRead, RedisUpdate, RedisDelete } from './pages/redis/index';
 import { PostgreCreate, PostgreRead, PostgreUpdate, PostgreDelete } from './pages/posgre/index';
-// import { Neo4Create, Neo4Read, Neo4Update, Neo4Delete } from './pages/neo4j/index';
+import { Neo4jCreate, Neo4jRead, Neo4jUpdate, Neo4jDelete } from './pages/neo4j/index';
 import { ElasticCreate, ElasticUpdate, ElasticDelete, ElasticRead } from './pages/elastic/index';
-import { Home, Mongo, Redis, Elastic, Postgres, Neo4j } from "./pages/index";
+
+import Home from "./pages/home";
 
 function App() {
   return (
@@ -36,12 +38,12 @@ function App() {
                 <Route path={'update'} element={<ElasticUpdate/>}/>
                 <Route path={'delete'} element={<ElasticDelete/>}/>
             </Route>
-            {/*<Route path="/neo4j/">*/}
-            {/*    <Route path={'create'} element={<Neo4/>}/>*/}
-            {/*    <Route path={'read'} element={<PostgreRead/>}/>*/}
-            {/*    <Route path={'update'} element={<PostgreUpdate/>}/>*/}
-            {/*    <Route path={'delete'} element={<PostgreDelete/>}/>*/}
-            {/*</Route>*/}
+            <Route path="/neo4j/">
+                <Route path={'create'} element={<Neo4jCreate/>}/>
+                <Route path={'read'} element={<Neo4jRead/>}/>
+                <Route path={'update'} element={<Neo4jUpdate/>}/>
+                <Route path={'delete'} element={<Neo4jDelete/>}/>
+            </Route>
         </Routes>
     </div>
   );
