@@ -7,6 +7,20 @@ const { client } = require('../../databases/elasticsearch/index');
 router.get('/read', (req, res) => {
     const data = [];
     (async () => {
+        // await client.index({
+        //     // id: 2,
+        //     index: 'course',
+        //     body: {
+        //         name: "Course name",
+        //         description: "Course description"
+        //     }
+        // }, (err, resp) => {
+        //     if (err) {
+        //         console.log(err);
+        //     } else {
+        //         console.log(resp);
+        //     }
+        // })
         const document = await client.search();
 
         for (let i = 0; i < (document.hits.hits).length; i++) {
