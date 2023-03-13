@@ -28,3 +28,32 @@
     color: #fff;
     background: chocolate;
 }
+
+.read_info {
+    display: flex;
+}
+.search_students {
+    border: 1px solid #282c34;
+    width: 350px; height: 300px;
+}
+.search_students form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search_students form p {
+    font-family: "Segoe UI", sans-serif;
+    font-size: 17px;
+    text-align: center;
+}
+.search_students form input {
+    width: 100px;
+}
+.search_students .period label {
+    margin: 0 5px 0 5px;
+}
+.search_students form .button {
+    width: 100px; height: 30px;
+    margin: 50px 0 0 0;
+}

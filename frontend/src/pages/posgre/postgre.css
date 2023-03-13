@@ -54,6 +54,7 @@
 .read_info tr {
     margin: 0; padding: 0;
 }
+
 .read_info .edit_row {
     background: rgba(0,153,0, 1);
     width: 50%; height: 100%;

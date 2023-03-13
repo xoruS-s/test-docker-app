@@ -9,11 +9,15 @@ const { create_neo4j_router, read_neo4j_router, update_neo4j_router, delete_neo4
 const { create_postgres_router, read_postgres_router, update_postgres_router, delete_postgres_router } = require('./rotes/postgresql/index');
 const { create_redis_router, read_redis_router, update_redis_router, delete_redis_router } = require('./rotes/redisdb/index');
 
+const { lab_1_router } = require('./rotes/labs/index');
+
 const start_mongodb = require('./databases/mongodb/index');
 const start_redisdb = require('./databases/redisdb/index');
 const start_postgres = require('./databases/postgresql/index');
 const start_neo4j = require('./databases/neo4j/index');
 const start_elastic = require('./databases/elasticsearch/index');
+
+const start_random = require('./rotes/postgresql/fill_rand_data');
 
 const app = express();
 
@@ -36,8 +40,8 @@ app.use('/redis', read_redis_router);
 // app.use('/redis', delete_redis_router);
 
             //POSTGRESQL
-app.use('/postgre', create_postgres_router);
-app.use('/postgre', read_postgres_router);
+app.use('/postgres', create_postgres_router);
+app.use('/postgres', read_postgres_router);
 // app.use('/postgre', update_postgre_router);
 // app.use('/postgre', delete_postgre_router);
 
@@ -52,5 +56,7 @@ app.use('/elastic', create_elastic_router);
 app.use('/elastic', read_elastic_router);
 // app.use('/elastic', update_elastic_router);
 // app.use('/elastic', delete_elastic_router);
+
+app.use('/labs', lab_1_router);
 
 module.exports = app;

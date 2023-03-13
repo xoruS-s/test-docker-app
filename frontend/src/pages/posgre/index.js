@@ -1,4 +1,4 @@
-export { default as PostgreCreate } from './create';
-export { default as PostgreRead } from './read';
-export { default as PostgreUpdate } from './update';
-export { default as PostgreDelete } from './delete';
+export { default as PostgresCreate } from './create';
+export { default as PostgresRead } from './read';
+export { default as PostgresUpdate } from './update';
+export { default as PostgresDelete } from './delete';

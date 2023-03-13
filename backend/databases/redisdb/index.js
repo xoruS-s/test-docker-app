@@ -18,7 +18,7 @@ module.exports = {
                 console.log('RedisDB: Не подключено')
             }
         } catch (err) {
-            console.log(err);
+            // console.log(err);
         }
         // const pingCommandResult = await redisClient.ping();
         // await console.log(pingCommandResult);

@@ -28,16 +28,11 @@ router.get('/read', (req, res) => {
     //     client.end();
     // })
 
-    //ПЕРЕДЕЛАТЬ - не те данные, нужны - посещение лекций
-    client.query('SELECT * FROM description_course', (err, result) => {
-        if (err !== undefined) {
-            console.log('PostgreSQL: Не подключено');
-        } else {
-            // console.log(res.rows);
-            res.status(200).json(result.rows);
-        }
-        // client.end()
-    })
+    client.query('select number_week, course_name, "group", firstname, lastname, patronymic, visited from week\n' +
+        'JOIN course c on c.id_course = week.id_course\n' +
+        'JOIN student s on s.id_student = c.id_student  order by (number_week)', (err, result) => {
+        res.status(200).json(result.rows);
+    });
 });
 
 module.exports = router;

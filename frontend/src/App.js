@@ -3,11 +3,12 @@ import React, { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import { Create, MongoRead, Update, Delete } from './pages/mongo/index';
 import { RedisCreate, RedisRead, RedisUpdate, RedisDelete } from './pages/redis/index';
-import { PostgreCreate, PostgreRead, PostgreUpdate, PostgreDelete } from './pages/posgre/index';
+import { PostgresCreate, PostgresRead, PostgresUpdate, PostgresDelete } from './pages/posgre/index';
 import { Neo4jCreate, Neo4jRead, Neo4jUpdate, Neo4jDelete } from './pages/neo4j/index';
 import { ElasticCreate, ElasticUpdate, ElasticDelete, ElasticRead } from './pages/elastic/index';
 
 import Home from "./pages/home";
+import Lab1 from "./pages/lab1";
 
 function App() {
   return (
@@ -26,11 +27,11 @@ function App() {
                 <Route path={'update'} element={<RedisUpdate/>}/>
                 <Route path={'delete'} element={<RedisDelete/>}/>
             </Route>
-            <Route path="/postgre/">
-                <Route path={'create'} element={<PostgreCreate/>}/>
-                <Route path={'read'} element={<PostgreRead/>}/>
-                <Route path={'update'} element={<PostgreUpdate/>}/>
-                <Route path={'delete'} element={<PostgreDelete/>}/>
+            <Route path="/postgres/">
+                <Route path={'create'} element={<PostgresCreate/>}/>
+                <Route path={'read'} element={<PostgresRead/>}/>
+                <Route path={'update'} element={<PostgresUpdate/>}/>
+                <Route path={'delete'} element={<PostgresDelete/>}/>
             </Route>
             <Route path="/elastic/">
                 <Route path={'create'} element={<ElasticCreate/>}/>
@@ -43,6 +44,11 @@ function App() {
                 <Route path={'read'} element={<Neo4jRead/>}/>
                 <Route path={'update'} element={<Neo4jUpdate/>}/>
                 <Route path={'delete'} element={<Neo4jDelete/>}/>
+            </Route>
+            <Route path="/labs/">
+                <Route path={'lab_1'} element={<Lab1/>}/>
+                {/*<Route path={'lab_2'} element={<Neo4jRead/>}/>*/}
+                {/*<Route path={'lab_3'} element={<Neo4jUpdate/>}/>*/}
             </Route>
         </Routes>
     </div>
