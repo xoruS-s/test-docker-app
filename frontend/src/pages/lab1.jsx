@@ -27,16 +27,25 @@ const Lab1 = () => {
         item => {
             return(
                 <tr>
-                    <td>{item.coursename}</td>
-                    <td>{item.numberweek}</td>
                     <td>{item.groupname}</td>
                     <td>{item.lastname}</td>
                     <td>{item.firstname}</td>
                     <td>{item.patronymic}</td>
                     <td>{item.studentnumber}</td>
                     <td>{item.educationbegindate}</td>
-                    <td>{item.percent_visits}</td>
+                    <td>{item.percent} %</td>
                 </tr>
+            )
+        }
+    )
+    const DisplayInfoPost = data.map(
+        item => {
+            return(
+                <div>
+                    <p>{item.coursename}</p>
+                    {/*<p>{item.}</p>*/}
+                    {/*<p>{}</p>*/}
+                </div>
             )
         }
     )
@@ -66,17 +75,22 @@ const Lab1 = () => {
 
                     <p>Введите период</p>
                     <div className={'period'}>
+                        {/*<select>*/}
+                        {/*    <option value={beginWeek}>1</option>*/}
+                        {/*    <option value={beginWeek}>2</option>*/}
+                        {/*</select>*/}
                         <label>С</label><input type="text" value={beginWeek} onChange={(e) => setBeginWeek(e.target.value)}/>
                         <label>по</label><input type="text" value={endWeek} onChange={(e) => setEndWeek(e.target.value)}/>
                     </div>
                     <input type={'submit'} value={'Найти'} className={'button'} onClick={refreshPage}/>
                 </form>
+                <div className={'post_info'}>
+                    <p>{course}</p>
+                </div>
             </div>
             <table>
                 <thead>
                 <tr>
-                    <th>Название курса</th>
-                    <th>Неделя</th>
                     <th>Группа</th>
                     <th>Фамилия</th>
                     <th>Имя</th>

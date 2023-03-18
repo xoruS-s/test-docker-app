@@ -7,7 +7,7 @@ const user_schema = new Schema({
     patronymic: { type: String },
     groupname: { type: String },
     studentnumber: { type: String },
-    educationbegindate: { type: Date }
+    educationbegindate: { type: String }
 })
 
 module.exports = mongoose.model('users', user_schema);
