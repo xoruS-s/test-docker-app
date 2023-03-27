@@ -9,6 +9,7 @@ import { ElasticCreate, ElasticUpdate, ElasticDelete, ElasticRead } from './page
 
 import Home from "./pages/home";
 import Lab1 from "./pages/lab1";
+import Lab2 from "./pages/lab2";
 
 function App() {
   return (
@@ -47,7 +48,7 @@ function App() {
             </Route>
             <Route path="/labs/">
                 <Route path={'lab_1'} element={<Lab1/>}/>
-                {/*<Route path={'lab_2'} element={<Neo4jRead/>}/>*/}
+                <Route path={'lab_2'} element={<Lab2/>}/>
                 {/*<Route path={'lab_3'} element={<Neo4jUpdate/>}/>*/}
             </Route>
         </Routes>

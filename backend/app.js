@@ -9,7 +9,7 @@ const { create_neo4j_router, read_neo4j_router, update_neo4j_router, delete_neo4
 const { create_postgres_router, read_postgres_router, update_postgres_router, delete_postgres_router } = require('./rotes/postgresql/index');
 const { create_redis_router, read_redis_router, update_redis_router, delete_redis_router } = require('./rotes/redisdb/index');
 
-const { lab_1_router } = require('./rotes/labs/index');
+const { lab_1_router, lab_2_router } = require('./rotes/labs/index');
 
 const start_mongodb = require('./databases/mongodb/index');
 const start_redisdb = require('./databases/redisdb/index');
@@ -58,5 +58,6 @@ app.use('/elastic', read_elastic_router);
 // app.use('/elastic', delete_elastic_router);
 
 app.use('/labs', lab_1_router);
+app.use('/labs', lab_2_router)
 
 module.exports = app;
